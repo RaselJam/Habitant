@@ -1,0 +1,34 @@
+.tecnologia {
+  width: 100%;
+  height: 550px;
+  background-color: #00eac5;
+  font-weight: 400;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    color: rgb(19, 18, 18);
+    align-items: center;
+    > * {
+      min-height: 307px;
+    }
+    .right {
+      width: 398px;
+    }
+
+    .left {
+      width: 395px;
+      h2 {
+        padding-bottom: 24px;
+        font-size: 36px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        padding-bottom: 35.5px;
+      }
+    }
+  }
+}

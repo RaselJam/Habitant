@@ -1,0 +1,43 @@
+.tuPartner {
+  .container {
+    padding-bottom: 32px;
+    padding-top: 16px;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 419px;
+        h1 {
+          padding-top: 47px;
+          font-size: 52px;
+          color: #1f0742;
+          line-height: 56px;
+          padding-bottom: 24px;
+        }
+        p {
+          font-size: 22px;
+          line-height: 32px;
+          font-weight: 300;
+          color: #655e79;
+          padding-bottom: 24.16px;
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .control {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.rotate {
+  transform: rotate(var(--rotateDeg));
+  color: var(--meyticolor);
+}

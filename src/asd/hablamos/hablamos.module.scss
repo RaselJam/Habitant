@@ -1,0 +1,78 @@
+.hablamos {
+  width: 100%;
+  height: 520px;
+  background: url("../../assets/images/hablamos.png") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #370087;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    color: #ffffff;
+    align-items: center;
+    > * {
+      text-align: center;
+    }
+    p strong {
+      font-weight: bold;
+    }
+    .svg {
+      padding-bottom: 16px;
+    }
+    h2 {
+      padding-bottom: 8px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+    h2 + p {
+      font-size: 16px;
+      line-height: 26px;
+      width: 268px;
+      padding-bottom: 40px;
+      font-weight: 300;
+      strong {
+        font-weight: bolder;
+      }
+    }
+    button + p {
+      padding-top: 32px;
+      width: 306px;
+      line-height: 22px;
+      position: relative;
+      font-size: 14px;
+      letter-spacing: 0.42px;
+      font-weight: 300;
+      strong::before {
+        content: "";
+        position: absolute;
+        width: 127px;
+        bottom: 22px;
+        height: 1px;
+        background-color: #ffffff;
+      }
+    }
+    .email {
+      padding-top: 8px;
+      font-size: 14px;
+      width: 269px;
+      overflow-wrap: break-word;
+      font-weight: 400;
+      letter-spacing: 0.42px;
+    }
+  }
+}
+
+
+@media (max-width: 1098px) {
+  .container {
+    width: 100%;
+  }
+}

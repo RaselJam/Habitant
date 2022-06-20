@@ -1,0 +1,19 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6c30eb;
+  height: 47px;
+  font-size: 14px;
+  color: #ffffff;
+  border: none;
+  padding-left: 34px;
+  padding-right: 16.67px;
+  align-items: center;
+  border-radius: 27.5px;
+  &.noIcon {
+    padding-right: 34px;
+  }
+  svg {
+    margin-left: 40px;
+  }
+}

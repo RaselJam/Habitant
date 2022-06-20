@@ -1,0 +1,141 @@
+@import "../../styles//colors.scss";
+
+.integeramos {
+  background-color: $BLANCO;
+  padding-top: 104px;
+  padding-bottom: 104px;
+
+  .container {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    justify-content: space-between;
+    height: 100%;
+    width: 998px;
+    margin: auto;
+    align-items: center;
+    .header {
+      display: flex;
+      gap: 16px;
+      width: 998px;
+      max-width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      > * {
+        max-width: 46%;
+      }
+      p {
+        width: 469px;
+        font-size: 16px;
+        line-height: 26px;
+        color: $NEUTRO_BODYCOPY;
+        strong {
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      width: 998px;
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .integeramos {
+    .container {
+      width: 100%;
+      padding: 50px 40px;
+    }
+  }
+}
+@media screen and (max-width: 1077px) {
+  .integeramos {
+    .container {
+      .header {
+        flex-wrap: wrap;
+        gap: 48px;
+        justify-content: center;
+        > * {
+          max-width: 100%;
+        }
+        h2 {
+          font-size: 42px;
+          width: 67%;
+        }
+        p {
+          font-size: 20px;
+          width: 67%;
+        }
+      }
+
+      .cards {
+        gap: 16px;
+        justify-content: center;
+        width: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .integeramos {
+    height: auto;
+
+    .container {
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+
+      .header {
+        flex-direction: column;
+        > * {
+          max-width: 69%;
+        }
+      }
+
+      .cards {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .integeramos {
+    height: auto;
+    padding-top: 64px;
+
+    .container {
+      .header {
+        gap: unset;
+        width: 80%;
+        > * {
+          max-width: 100%;
+        }
+        h2 {
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 24px;
+          width: unset;
+        }
+        p {
+          width: unset;
+          font-size: 16px;
+        }
+      }
+
+      .cards {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+      }
+    }
+  }
+}

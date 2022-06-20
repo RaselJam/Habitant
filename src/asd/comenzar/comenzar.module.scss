@@ -1,0 +1,88 @@
+.comenzar {
+  width: 100%;
+  height: 735px;
+  background-image: url("../../assets/images/wave2.gif");
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    color: white;
+    align-items: center;
+    > * {
+      min-height: 307px;
+    }
+    .right {
+      width: 398px;
+      position: relative;
+      isolation: isolate;
+      .head {
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          object-fit: cover;
+          opacity: 0.5;
+        }
+        .texblock {
+          top: 24px;
+          left: 23px;
+          position: absolute;
+          display: flex;
+          gap: 16px;
+          z-index: 1;
+          span {
+            background-color: #6c30eb;
+            width: 42px;
+            height: 42px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 8px;
+          }
+          h2 {
+            font-size: 24px;
+            line-height: 30px;
+            width: 259px;
+          }
+        }
+      }
+      .dots {
+        margin: 20px auto;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        span {
+          width: 4px;
+          height: 4px;
+          background-color: #6c30eb;
+          border-radius: 50%;
+          display: block;
+          &.active {
+            background-color: #ffffff;
+            border: solid #6c30eb 8px;
+          }
+        }
+      }
+    }
+
+    .left {
+      width: 400px;
+      button {
+        color: white;
+      }
+      h2 {
+        padding-bottom: 24px;
+        font-size: 36px;
+        line-height: 42px;
+      }
+      p {
+        font-size: 16px;
+        padding-bottom: 43.5px;
+        line-height: 26px;
+      }
+    }
+  }
+}

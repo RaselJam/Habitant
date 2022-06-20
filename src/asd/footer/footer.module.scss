@@ -1,0 +1,99 @@
+.footer {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 1200px;
+    margin: auto;
+    align-items: center;
+    > * {
+      border-bottom: 1px solid #8881b4;
+      width: 100%;
+    }
+    .partners {
+      display: flex;
+      gap: 64px;
+      align-items: center;
+
+      padding-bottom: 40px;
+      padding-top: 64px;
+    }
+    .menu {
+      padding: 24px 0;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        li {
+          width: 33%;
+          .navLink {
+            text-decoration: none;
+            font-size: 11px;
+            line-height: 12px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .mainLogoContaier {
+      padding: 24px 0;
+
+      display: flex;
+      justify-content: space-between;
+
+      .mobileLogo {
+        display: none;
+      }
+      .terminos {
+        li {
+          text-align: right;
+          padding-bottom: 8px;
+          a {
+            color: #8881b4;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: none;
+      padding-top: 16px;
+      color: #8881b4;
+      .copyRight {
+        font-size: 11px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+      .lang {
+        background-color: transparent;
+        appearance: none;
+        border: none;
+        height: 30px;
+        .langList {
+          li {
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 13.2px;
+            letter-spacing: 2.4px;
+            display: none;
+            &.active {
+              display: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1098px) {
+  .container {
+    width: 100%;
+    background-color: red;
+  }
+}

@@ -1,0 +1,107 @@
+@import "../../../styles//colors.scss";
+
+.card {
+  width: 491px;
+  height: 236px;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #f5f3ff;
+  background-image: url("../../../assets/images/cardback.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .head {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 25px;
+
+    h2 {
+      font-family: "Stolzl";
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24x;
+  }
+  button {
+    font-size: 14px;
+    color: $MORADO_FRIO;
+    width: 123px;
+    height: 22px;
+    border: none;
+    position: absolute;
+    bottom: 30px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .icon {
+    width: 42px;
+    height: 42px;
+    background-color: $BLANCO;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 12px 16px -7px rgba(31, 7, 66, 0.2);
+  }
+}
+@media screen and (max-width: 1077px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 723px) {
+  .card {
+    height: auto;
+
+    p {
+      line-height: 34px;
+    }
+    button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 6px;
+      position: unset;
+      margin-top: 16px;
+      width: 100%;
+      svg {
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 80%;
+
+    .head {
+      h2 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 500;
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+}
+@media screen and (max-width: 465px) {
+  .card {
+    padding: 16px;
+
+    p {
+      line-height: 28px;
+    }
+  }
+}

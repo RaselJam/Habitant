@@ -1,0 +1,66 @@
+@import "../../../styles//colors.scss";
+
+.main {
+  border: 2px $MORADO_CLARO solid;
+  width: 296px;
+  height: 56px;
+  border-radius: 4px;
+  position: relative;
+  isolation: isolate;
+  &.textare {
+    height: auto;
+  }
+
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    max-width: 295px;
+    height: 60%;
+    width: 89%;
+    padding: 0 16px;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  textarea {
+    height: fit-content;
+    min-height: 96px;
+    resize: none;
+    line-height: 17px;
+    padding-top: 6px;
+  }
+  label {
+    position: absolute;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $XXX;
+    margin: 16px;
+    z-index: -1;
+    transition: all 0.2s ease-in-out;
+    @media (max-width: 576px) {
+      margin: 8px;
+    }
+  }
+  &.focused {
+    border-color: $MORADO_FRIO;
+    input,
+    textarea {
+      line-height: 24px;
+    }
+
+    label {
+      color: $MORADO_FRIO;
+      top: -9px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+  &.error {
+    border-color: $PINK;
+    label {
+      color: $PINK2;
+    }
+  }
+}

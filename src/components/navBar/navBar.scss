@@ -1,0 +1,279 @@
+//TODO Refactor and clean all this file.
+@import "../../styles//colors.scss";
+
+.container-opened {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.navBar {
+  width: 100%;
+  background-color: $GRIS_CLARO;
+
+  .nav-container {
+    display: flex;
+    background-color: $GRIS_CLARO;
+    width: 1186px;
+    max-width: 100%;
+    height: 90px;
+    margin: 0 auto;
+
+    .nav-lang {
+      display: flex;
+      width: 94px;
+      justify-content: flex-end;
+
+      .lang {
+        background-color: inherit;
+        line-height: 13.2px;
+        font-size: 11px;
+        font-weight: 400;
+        align-self: center;
+        position: relative;
+        color: $MORADO_FRIO;
+        border: none;
+        font-family: "Stolzl";
+        text-align: center;
+        .langList li {
+          // TODO Style  Onhover or click to show acordingly all Langs, ask Designer
+          display: none;
+          &.active {
+            display: inherit;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 77%;
+          bottom: -2px;
+          left: 4px;
+          background-color: $MORADO_FRIO;
+        }
+      }
+    }
+  }
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 10;
+  margin-left: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  width: 82%;
+  justify-content: space-evenly;
+  .descrption {
+    display: none;
+    padding-left: 34px;
+    width: 100%;
+    color: $BLANCO;
+    p {
+      margin-top: 32px;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: left;
+      strong {
+        font-weight: 400;
+      }
+    }
+    p:last-of-type {
+      margin-top: 4px;
+    }
+    .lang-openned {
+      margin-top: 54px;
+      margin-bottom: 27px;
+      .lang {
+        .langList {
+          display: flex;
+          gap: 23px;
+          li {
+            display: unset;
+            color: $MORADO_FRIO;
+            position: relative;
+            &.active {
+              color: $BLANCO;
+              &::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 35px;
+                bottom: -9px;
+                left: -6px;
+                background-color: $BLANCO;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-links {
+  color: $NEUTRO_TITULARES;
+  text-decoration: none;
+  height: 100%;
+
+  .nav-links-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    :nth-child(1) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    :nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.nav-item {
+  line-height: 40px;
+  transition: all 0.4s ease-in-out;
+  text-align: right;
+
+  :hover,
+  :active &.active {
+    font-weight: 500;
+  }
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-menu {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: -210%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    .descrption {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .nav-menu.active {
+    height: 100vh;
+    min-height: 779px;
+    background: $NEUTRO_TITULARES;
+    padding-top: 100px;
+    top: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 8;
+  }
+  .nav-item .active {
+    color: #ffdd40;
+    border: none;
+    width: 100%;
+  }
+  .nav-links {
+    color: $BLANCO;
+    display: flex;
+    margin: 7.43px 0 30.46px;
+    padding-left: 34px;
+    width: 100%;
+    .nav-links-wrapper {
+      display: none;
+    }
+
+    .nav-links-wrapper.active {
+      color: $BLANCO;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      :nth-child(1) {
+        font-size: 22px;
+        font-weight: 500;
+      }
+      :nth-child(2) {
+        display: block;
+        font-size: 11px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .nav-icon {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 22px;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #ffdd40;
+    .times {
+      display: flex;
+      flex-direction: column;
+      span {
+        width: 50px;
+        color: $BLANCO;
+        height: 4px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .nav-logo.active {
+    svg {
+      width: 167px;
+      height: 42px;
+    }
+  }
+  .navBar {
+    .nav-container {
+      position: relative;
+
+      .nav-lang {
+        display: none;
+      }
+
+      .nav-lang.active {
+        display: flex;
+        z-index: 10;
+        position: absolute;
+      }
+
+      .lang {
+        background-color: inherit;
+        line-height: 13.2px;
+        font-size: 11px;
+        font-weight: 400;
+        align-self: center;
+        position: relative;
+        color: $BLANCO;
+        border: none;
+        font-family: "Stolzl";
+        text-align: center;
+        .langList li {
+          // TODO Style  Onhover or click to show acordingly all Langs, ask Designer
+          display: none;
+          &.active {
+            display: inherit;
+          }
+        }
+      }
+    }
+  }
+}

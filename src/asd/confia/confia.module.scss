@@ -1,0 +1,47 @@
+.confia {
+  width: 100%;
+  height: 550px;
+  background: #f5f3ff;
+  color: #1f0742;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    color: rgb(19, 18, 18);
+    align-items: center;
+    > * {
+      min-height: 307px;
+    }
+    .right {
+      width: 398px;
+    }
+
+    .left {
+      width: 400px;
+      h2 {
+        padding-bottom: 32px;
+        font-size: 36px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        strong {
+          font-weight: bold;
+        }
+      }
+      .logo {
+        padding: 24px 0 35.5px;
+      }
+      button {
+        span {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import "../../styles//colors.scss";
+
+.confia {
+  width: 100%;
+  height: 550px;
+  background: $GRIS_CLARO;
+  color: $NEUTRO_TITULARES;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    color: rgb(19, 18, 18);
+    align-items: center;
+    > * {
+      min-height: 307px;
+    }
+    .right {
+      width: 398px;
+      img.mob {
+        display: none;
+      }
+    }
+
+    .left {
+      width: 400px;
+      color: $NEUTRO_TITULARES;
+      h2 {
+        padding-bottom: 32px;
+        font-size: 36px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        margin-bottom: 29.42px;
+        strong {
+          font-weight: bold;
+        }
+      }
+      .logo {
+        margin-bottom: 37px;
+      }
+
+      button {
+        span {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .confia {
+    .container {
+      width: 100%;
+      padding: 50px 40px;
+    }
+  }
+}
+@media screen and (max-width: 859px) {
+  .confia .container .left {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .confia {
+    height: auto;
+    padding-top: 64px;
+    padding-bottom: 51.5px;
+    .container {
+      width: 100%;
+      flex-direction: column-reverse;
+      padding: 0;
+      display: flex;
+      .right {
+        img.desk {
+          display: none;
+        }
+        img.mob {
+          display: inherit;
+          margin: 0 auto;
+          width: 80%;
+        }
+      }
+      .left {
+        width: 80%;
+        p {
+          color: $NEUTRO_BODYCOPY;
+        }
+        h2 {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .confia {
+    height: auto;
+    padding-top: 72px;
+    padding-bottom: 51.5px;
+    .container {
+      width: 100%;
+      flex-direction: column-reverse;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      .right {
+        max-width: 100%;
+        img.desk {
+          display: none;
+        }
+        img.mob {
+          display: inherit;
+          margin: 0 auto;
+          width: 294px;
+        }
+      }
+      .left {
+        width: 297px;
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: 400;
+        }
+        h2 {
+          margin: 0 auto;
+          width: 296px;
+          font-size: 22px;
+          line-height: 32px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

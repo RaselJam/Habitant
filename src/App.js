@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.scss";
+import NavBar from "./components/navBar/navBar";
+import TuPartner from "./components/tuPartner/tuPartner";
+import UnModelo from "./components/unModelo/unModelo";
+import Integreamos from "./components/integramos/integreamos";
+import Tecnologia from "./components/tecnologia/tecnologia";
+import Comenzar from "./components/comenzar/comenzar";
+import Confia from "./components/confia/confia";
+import LasMarcas from "./components/lasMarcas/lasMarcas";
+import Hablamos from "./components/hablamos/hablamos";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <TuPartner />
+      <UnModelo />
+      <Integreamos />
+      <Tecnologia />
+      <Comenzar />
+      <Confia />
+      <LasMarcas />
+      <Hablamos />
+      <Footer />
     </div>
   );
 }

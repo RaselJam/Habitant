@@ -1,0 +1,127 @@
+@import "../../../styles//colors.scss";
+
+.formContainer {
+  width: 360px;
+  height: 724px;
+  padding: 36px 32px 77px;
+  background-color: $BLANCO;
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $MORADO_FRIO;
+    margin-bottom: 34px;
+    svg {
+      margin-left: 87.25px;
+      cursor: pointer;
+    }
+    svg:nth-of-type(2) {
+      display: none;
+    }
+  }
+  form {
+    width: 296px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    p {
+      margin-top: -8px;
+      font-weight: 400;
+      color: $XXX;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    .terminos {
+      flex-direction: column;
+      display: flex;
+
+      gap: 23px;
+      label {
+        display: flex;
+        gap: 26px;
+        align-items: center;
+
+        input[type="checkbox"] {
+          position: relative;
+          z-index: 99;
+          appearance: none;
+        }
+        input[type="checkbox"]::after {
+          content: "";
+          width: 22px;
+          height: 22px;
+          border: 1px solid $MORADO_FRIO;
+          border-radius: 4px;
+          position: absolute;
+          top: -12px;
+          left: -5px;
+        }
+        input[type="checkbox"]:checked:after {
+          background-color: $MORADO_FRIO;
+          content: url("../../../assets/icons/statics/tick.svg");
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        span {
+          font-size: 11px;
+          color: $XXX;
+          line-height: 14px;
+        }
+      }
+    }
+    button {
+      width: 244px;
+      margin: 27px auto;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      padding-left: 33%;
+      letter-spacing: 0.7px;
+      height: 60px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .formContainer {
+    width: 360px;
+    height: 663px;
+    padding: 26px 32px 77px;
+    border-radius: 29.5px;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+    h3 {
+      svg {
+      }
+      svg:nth-of-type(1) {
+        display: none;
+      }
+      svg:nth-of-type(2) {
+        display: unset;
+      }
+    }
+    form {
+      width: 296px;
+      height: 100%;
+
+      p {
+        margin-top: -8px;
+      }
+      .terminos {
+        label {
+          display: flex;
+          gap: 26px;
+          align-items: center;
+        }
+      }
+      button {
+        height: 66px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.dots {
+  margin: 20px auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  span {
+    width: 4px;
+    height: 4px;
+    background-color: #6c30eb;
+    border-radius: 50%;
+    display: block;
+    &.active {
+      background-color: #ffffff;
+      border: solid #6c30eb 8px;
+    }
+  }
+}

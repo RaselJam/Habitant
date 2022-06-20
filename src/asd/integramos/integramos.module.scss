@@ -1,0 +1,40 @@
+.integeramos {
+  background-color: #ffffff;
+  padding-top: 104px;
+  padding-bottom: 104px;
+
+  .container {
+    display: flex;
+    flex-flow: column;
+    gap: 40px;
+    justify-content: space-between;
+    height: 100%;
+    width: 1099px;
+    margin: auto;
+    align-items: center;
+    .header {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      align-items: center;
+      > * {
+        max-width: 50%;
+      }
+      p {
+        width: 469px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #655e79;
+        strong {
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .cards {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+  }
+}
